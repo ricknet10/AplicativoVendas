@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kkgjVzwMbGoK8mBEWSnxDUmB6WTYEtUFnpc7dYTGIOI=",
+  "Hash": "B2bfGYAEnaW2hWfye237bUoqhjvj/17GLyZC7k4++QU=",
   "Source": "AplicativoVendas",
   "BasePath": "_content/AplicativoVendas",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\RICK\\source\\AplicativoVendas\\AplicativoVendas\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css",
+      "SourceId": "AplicativoVendas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RICK\\source\\AplicativoVendas\\AplicativoVendas\\wwwroot\\",
+      "BasePath": "_content/AplicativoVendas",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-flatly.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css"
     },
     {
       "Identity": "C:\\Users\\RICK\\source\\AplicativoVendas\\AplicativoVendas\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
