@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AplicativoVendas.Models;
+using Microsoft.Identity.Client;
 
 namespace AplicativoVendas.Data
 {
@@ -12,8 +13,10 @@ namespace AplicativoVendas.Data
         public AplicativoVendasContext (DbContextOptions<AplicativoVendasContext> options)
             : base(options)
         {
+             
+
         }
 
-        public DbSet<AplicativoVendas.Models.Department> Department { get; set; } = default!;
+        public DbSet<Department> Department { get; set; } = default!;
     }
 }
