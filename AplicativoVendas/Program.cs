@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AplicativoVendasContext>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();        
 builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<AppSettingsDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SalesWebMvcContext")));
 
