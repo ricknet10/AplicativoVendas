@@ -1,4 +1,5 @@
-﻿using AplicativoVendas.Services;
+﻿using AplicativoVendas.Models;
+using AplicativoVendas.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AplicativoVendas.Controllers
@@ -17,6 +18,19 @@ namespace AplicativoVendas.Controllers
         {
             var list = _sellerService.FindAll();
             return View(list);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Seller seller) {
+            _sellerService.Insert(seller);
+            return RedirectToAction(nameof(Index));
+
         }
     }
 }

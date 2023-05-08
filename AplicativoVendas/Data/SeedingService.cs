@@ -24,13 +24,13 @@ namespace AplicativoVendas.Data
                 return; // DB has been seeded
             }
 
-            Department d1 = new Department(10, "Computers");
-            Department d2 = new Department(12, "Electronics");
-            Department d3 = new Department(13, "Fashion");
-            Department d4 = new Department(14, "Books");
+            Department d1 = new Department(1, "Computers");
+            Department d2 = new Department(2, "Electronics");
+            Department d3 = new Department(3, "Fashion");
+            Department d4 = new Department(4, "Books");
 
             
-            Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com","1998, 4, 21", 1000.0, d1);
+            Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com",new DateTime(1998, 4, 21), 1000.0, d1);
            // Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com",  DateTime(1979, 12, 31), 3500.0, d2);
            /* Seller s3 = new Seller(3, "Alex Grey", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
             Seller s4 = new Seller(4, "Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);

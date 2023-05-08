@@ -21,7 +21,7 @@ namespace AplicativoVendas.Models
         public string Email { get; set; }
         [Column("BirthDate")]
         [Display(Name = "BirthDate")]
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         [Column("BaseSalary")]
         [Display(Name = "BaseSalary")]
         public double BaseSalary { get; set; }
@@ -29,6 +29,7 @@ namespace AplicativoVendas.Models
         [Display(Name = "Department")]
 
         public Department Department { get; set; }
+        public int DepartmentId { get;set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
@@ -37,7 +38,7 @@ namespace AplicativoVendas.Models
         }
 
         
-        public Seller(int id, string name, string email, string birthDate, double baseSalary, Department department)
+        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;
