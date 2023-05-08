@@ -13,7 +13,7 @@ namespace AplicativoVendas.Models
     {
 
         [Column("Id")]
-        [Display(Name = "CODIGO")]  
+        [Display(Name = "Id")]
 
         public int Id { get; set; }
 
@@ -21,7 +21,10 @@ namespace AplicativoVendas.Models
         [Display(Name = "Nome")]
         public string Name { get; set; }
 
-        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();  
+        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
+
+        public Department(){
+            }
            
         public Department(int id, string name)
         {

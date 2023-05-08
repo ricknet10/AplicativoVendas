@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using AplicativoVendas.Models;
 using Microsoft.Identity.Client;
 
-namespace AplicativoVendas.Data
+namespace AplicativoVendas.Models
 {
     public class AplicativoVendasContext : DbContext
     {
@@ -17,8 +17,8 @@ namespace AplicativoVendas.Data
 
         }
 
-        public DbSet<Department> Department { get; set; } = default!;
+        public DbSet<Department> Department { get; set; } 
         public DbSet<Seller> Seller { get; set; }
-        public DbSet<SalesRecrod> SalesRecrods { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
     }
 }

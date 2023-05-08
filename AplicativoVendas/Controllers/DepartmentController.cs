@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using AplicativoVendas.Data;
 using AplicativoVendas.Models;
 
 namespace AplicativoVendas.Controllers
 {
-    public class DepartmentsController : Controller
+    public class DepartmentController : Controller
     {
         private readonly AplicativoVendasContext _context;
 
-        public DepartmentsController(AplicativoVendasContext context)
+        public DepartmentController(AplicativoVendasContext context)
         {
             _context = context;
         }
@@ -22,9 +21,9 @@ namespace AplicativoVendas.Controllers
         // GET: Departments
         public async Task<IActionResult> Index()
         {
-              return _context.Department != null ? 
-                          View(await _context.Department.ToListAsync()) :
-                          Problem("Entity set 'AplicativoVendasContext.Department'  is null.");
+            return _context.Department != null ?
+                        View(await _context.Department.ToListAsync()) :
+                        Problem("Entity set 'AplicativoVendasContext.Department'  is null.");
         }
 
         // GET: Departments/Details/5
@@ -150,14 +149,14 @@ namespace AplicativoVendas.Controllers
             {
                 _context.Department.Remove(department);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool DepartmentExists(int id)
         {
-          return (_context.Department?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Department?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

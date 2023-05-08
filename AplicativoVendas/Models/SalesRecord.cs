@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AplicativoVendas.Models
 {
 
-    [Table("SalesRecrod")]
-    public class SalesRecrod
+    [Table("SalesRecord")]
+    public class SalesRecord
     {
 
         [Column("Id")]
@@ -25,7 +25,13 @@ namespace AplicativoVendas.Models
         [Display(Name = "Seller")]
         public Seller Seller { get; set; }
 
-        public SalesRecrod (int id, DateTime date, double amount, SaleStatus status, Seller seller)
+        public SalesRecord()
+        {
+
+        }
+
+
+        public SalesRecord (int id, DateTime date, double amount, SaleStatus status, Seller seller)
         {
             Id = id;
             Date = date;

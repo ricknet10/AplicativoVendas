@@ -1,6 +1,6 @@
+using AplicativoVendas.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using AplicativoVendas.Data;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);

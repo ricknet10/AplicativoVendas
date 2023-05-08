@@ -16,24 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\RICK\source\AplicativoVendas\AplicativoVendas
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Departments/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Departments/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Departments/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Department/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Departments/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Departments/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+[C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/RICK/source/AplicativoVendas/AplicativoVendas/Views/Home/Index.cshtml]

@@ -29,7 +29,12 @@ namespace AplicativoVendas.Models
         [Display(Name = "Department")]
 
         public Department Department { get; set; }
-        public ICollection<SalesRecrod> Sales { get; set; } = new List<SalesRecrod>();
+        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
+
+        public Seller()
+        {
+
+        }
 
         
         public Seller(int id, string name, string email, string birthDate, double baseSalary, Department department)
@@ -41,11 +46,11 @@ namespace AplicativoVendas.Models
             BaseSalary = baseSalary;
             Department = department;
         }
-        public void AddSales(SalesRecrod sr)
+        public void AddSales(SalesRecord sr)
         {
             Sales.Add(sr);
         }
-        public void RemoveSales(SalesRecrod sr)
+        public void RemoveSales(SalesRecord sr)
         {
             Sales.Remove(sr);
         }
