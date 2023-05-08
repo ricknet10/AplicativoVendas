@@ -1,6 +1,7 @@
 ﻿using AplicativoVendas.Models;
 using AplicativoVendas.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace AplicativoVendas.Controllers
 {
@@ -8,10 +9,12 @@ namespace AplicativoVendas.Controllers
     {
 
         private readonly SellerService _sellerService;
+        private readonly DepartmentService _departmentService;
 
-        public SellerController(SellerService sellerService)
+        public SellerController(SellerService sellerService,DepartmentService departmentService)
         {
             _sellerService = sellerService;
+            _departmentService = departmentService;
         }
 
         public IActionResult Index()
@@ -20,9 +23,11 @@ namespace AplicativoVendas.Controllers
             return View(list);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var department = await _departmentService.FindAllAsync();
+            var viewModel = new SellerFormViewModel { Department = department };    
+            return View(viewModel);
         }
 
         [HttpPost]
