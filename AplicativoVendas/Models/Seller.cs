@@ -14,19 +14,24 @@ namespace AplicativoVendas.Models
         [Display(Name = "Id")]
         public int Id { get; set; }
         [Column("Name")]
-        [Display(Name = "Name")]
+        [Display(Name = "Nome")]
         public string Name { get; set; }
         [Column("Email")]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [Column("BirthDate")]
-        [Display(Name = "BirthDate")]
+        [Display(Name = "Nascimento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+
         public DateTime BirthDate { get; set; }
         [Column("BaseSalary")]
-        [Display(Name = "BaseSalary")]
+        [Display(Name = "Salário")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        
         public double BaseSalary { get; set; }
         [Column("Department")]
-        [Display(Name = "Department")]
+        [Display(Name = "Departmento")]
 
         public Department Department { get; set; }
         public int DepartmentId { get;set; }
