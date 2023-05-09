@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AplicativoVendas.Services.Exceptions;
-using AplicativoVendas.Models;
 
 namespace AplicativoVendas.Services
 {
@@ -48,17 +47,16 @@ namespace AplicativoVendas.Services
             }
         }
 
-        public async Task UpdateAsync(Seller obj)
+        public void  Update(Seller obj)
         {
-            bool hasAny = await _context.Seller.AnyAsync(x => x.Id == obj.Id);
-            if (!hasAny)
+            if (!_context.Seller.Any(x => x.Id == obj.Id))
             {
                 throw new NotFoundException("Id not found");
             }
             try
             {
                 _context.Update(obj);
-                await _context.SaveChangesAsync();
+                _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException e)
             {

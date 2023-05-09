@@ -4,11 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using AplicativoVendas.Models;
+using AplicativoVendas.Services.Exceptions;
 using AplicativoVendas.Services;
 using Microsoft.AspNetCore.Mvc;
-using AplicativoVendas.Models;
-using AplicativoVendas.Services;
-using AplicativoVendas.Services.Exceptions;
 
 namespace AplicativoVendas.Controllers
 {
@@ -31,8 +29,8 @@ namespace AplicativoVendas.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var departments = await _departmentService.FindAllAsync();
-            var viewModel = new SellerFormViewModel { Department = departments };
+            var department = await _departmentService.FindAllAsync();
+            var viewModel = new SellerFormViewModel { Department = department };
             return View(viewModel);
         }
 
@@ -42,8 +40,8 @@ namespace AplicativoVendas.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var departments = await _departmentService.FindAllAsync();
-                var viewModel = new SellerFormViewModel { Seller = seller, Department = departments };
+                var department = await _departmentService.FindAllAsync();
+                var viewModel = new SellerFormViewModel { Seller = seller, Department = department };
                 return View(viewModel);
             }
             await _sellerService.InsertAsync(seller);
@@ -110,34 +108,22 @@ namespace AplicativoVendas.Controllers
                 return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
 
-            List<Department> departments = await _departmentService.FindAllAsync();
-            SellerFormViewModel viewModel = new SellerFormViewModel { Seller = obj, Department = departments };
+            List<Department> department = await _departmentService.FindAllAsync();
+            SellerFormViewModel viewModel = new SellerFormViewModel { Seller = obj, Department = department };
             return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Seller seller)
+        public  IActionResult Edit(int id, Seller seller)
         {
-            if (!ModelState.IsValid)
-            {
-                var departments = await _departmentService.FindAllAsync();
-                var viewModel = new SellerFormViewModel { Seller = seller, Department = departments };
-                return View(viewModel);
-            }
             if (id != seller.Id)
             {
-                return RedirectToAction(nameof(Error), new { message = "Id mismatch" });
+                
+                return BadRequest();
             }
-            try
-            {
-                await _sellerService.UpdateAsync(seller);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (ApplicationException e)
-            {
-                return RedirectToAction(nameof(Error), new { message = e.Message });
-            }
+           _sellerService.Update(seller);
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Error(string message)
